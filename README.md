@@ -17,7 +17,16 @@ Add the `TTGoogleMapsActivity` subfolder to your project. There are no required 
 
 ## Usage.
 
-Coming soon.
+```objectivec
+TTGoogleMapsActivity *googleMapsActivity = [[TTGoogleMapsActivity alloc] init];
+googleMapsActivity.latitude = @(self.userlocation.coordinate.latitude);
+googleMapsActivity.longitude = @(self.userlocation.coordinate.longitude);
+            
+NSArray *applicationActivities = @[googleMapsActivity];
+UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:nil applicationActivities:applicationActivities];
+        
+[self presentViewController:activityViewController animated:YES completion:NULL];
+```
 
 ## License
 
